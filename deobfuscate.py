@@ -19,3 +19,4 @@ decrypted_data = xor(encrypted_data, key)
 
 with open('decrypted.dmp', 'wb') as f:
     f.write(decrypted_data)
+print("[+] Deobfuscated dump saved in file decrypted.dmp")
