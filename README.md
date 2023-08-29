@@ -6,6 +6,8 @@ Key functionalities:
 2) Obfuscating memory dump files to evade defender signature-based detection mechanisms
 3) Uploading memory dump with RAW and SMB upload methods without dropping it onto the disk(fileless dump)
 
+Overview of the techniques, used in this tool can be found here: https://tastypepperoni.medium.com/bypassing-defenders-lsass-dump-detection-and-ppl-protection-in-go-7dd85d9a32e6
+
 
 ```
 Usage of PPLBlade.exe:
