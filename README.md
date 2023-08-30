@@ -3,7 +3,7 @@ Protected Process Dumper Tool that support obfuscating memory dump and transferr
 
 Key functionalities:
 1) Bypassing PPL protection
-2) Obfuscating memory dump files to evade defender signature-based detection mechanisms
+2) Obfuscating memory dump files to evade Defender signature-based detection mechanisms
 3) Uploading memory dump with RAW and SMB upload methods without dropping it onto the disk (fileless dump)
 
 
