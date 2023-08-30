@@ -1,7 +1,7 @@
 # PPLBlade
 Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
 
-Key functionalities:
+**Key functionalities**:
 1) Bypassing PPL protection
 2) Obfuscating memory dump files to evade Defender signature-based detection mechanisms
 3) Uploading memory dump with RAW and SMB upload methods without dropping it onto the disk (fileless dump)
@@ -13,15 +13,15 @@ _Note that PROCEXP15.SYS is listed in the source files for compiling purposes. I
 
 It’s already embedded into the PPLBlade.exe. The exploit is just a single executable._
 
-Modes:
-1) Dump - Dump process memory using PID or Process Name
-2) Decrypt - Revert obfuscated(--obfuscate) dump file to its original state
-3) Cleanup - Do cleanup manually, in case something goes wrong on execution(Note that the option values should be the same as for the execution, we're trying to clean up)
-4) DoThatLsassThing - Dump lsass.exe
+**Modes**:
+1) **Dump** - Dump process memory using PID or Process Name
+2) **Decrypt** - Revert obfuscated(--obfuscate) dump file to its original state
+3) **Cleanup** - Do cleanup manually, in case something goes wrong on execution(Note that the option values should be the same as for the execution, we're trying to clean up)
+4) **DoThatLsassThing** - Dump lsass.exe
 
-Handle Modes:
-1) Direct - Opens PROCESS_FULL_ACCESS handle directly, using OpenProcess() function
-2) Procexp - Uses PROCEXP152.sys to obtain a handle 
+**Handle Mode**s:
+1) **Direct** - Opens PROCESS_FULL_ACCESS handle directly, using OpenProcess() function
+2) **Procexp** - Uses PROCEXP152.sys to obtain a handle 
 
 ```
 Usage of PPLBlade.exe:
