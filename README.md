@@ -9,7 +9,7 @@ Protected Process Dumper Tool that support obfuscating memory dump and transferr
 
 Overview of the techniques, used in this tool can be found here: https://tastypepperoni.medium.com/bypassing-defenders-lsass-dump-detection-and-ppl-protection-in-go-7dd85d9a32e6
 
-_Note that PROCEXP15.SYS is listed in the source files for compiling purposes. It does not need to be transferred on the target machine alongside the PPLBlade.exe.
+_Note that PROCEXP15.SYS is listed in the source files for compiling purposes. It does not need to be transferred on the target machine alongside the PPLBlade.exe._
 
 It’s already embedded into the PPLBlade.exe. The exploit is just a single executable._
 
