@@ -16,8 +16,8 @@ _It’s already embedded into the PPLBlade.exe. The exploit is just a single exe
 **Modes**:
 1) **Dump** - Dump process memory using PID or Process Name
 2) **Decrypt** - Revert obfuscated(--obfuscate) dump file to its original state
-3) **Cleanup** - Do cleanup manually, in case something goes wrong on execution(Note that the option values should be the same as for the execution, we're trying to clean up)
-4) **DoThatLsassThing** - Dump lsass.exe
+3) **Cleanup** - Do cleanup manually, in case something goes wrong on execution _(Note that the option values should be the same as for the execution, we're trying to clean up)_
+4) **DoThatLsassThing** - Dump lsass.exe using Process Explorer driver (basic poc)
 
 **Handle Mode**s:
 1) **Direct** - Opens PROCESS_FULL_ACCESS handle directly, using OpenProcess() function
