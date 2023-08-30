@@ -45,7 +45,7 @@ var DUMPNAME = flag.String("dumpname", "PPLBlade.dmp", "Name of the dump file")
 var DUMPOBF = flag.Bool("obfuscate", false, "Obfuscate dump file")
 var OBFKEY = flag.String("key", "PPLBlade", "XOR Key for obfuscation")
 
-var NETWORKMODE = flag.String("network", "raw", "Method for network transfer")
+var NETWORKMODE = flag.String("network", "raw", "Method for network transfer [raw|smb]")
 var REMOTEIP = flag.String("ip", "", "IP of the remote server")
 var REMOTEPORT = flag.Int("port", 0, "PORT on the remote server")
 
