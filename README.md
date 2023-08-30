@@ -77,7 +77,7 @@ Basic POC that uses PROCEXP152.sys to dump lsass:
 ```
 PPLBlade.exe --mode dothatlsassthing
 ```
-It will use PROCEXP152.sys driver to dump lsass.exe. _(Note that it does not XOR dump file, provide an additional obfuscate flag to enable the XOR functionality)_
+_(Note that it does not XOR dump file, provide an additional obfuscate flag to enable the XOR functionality)_
 
 
 
