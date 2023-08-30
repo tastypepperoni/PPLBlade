@@ -1,18 +1,28 @@
 # PPLBlade
-Protected Process Dumper Tool
+Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk.
 
 Key functionalities:
 1) Bypassing PPL protection
 2) Obfuscating memory dump files to evade defender signature-based detection mechanisms
 3) Uploading memory dump with RAW and SMB upload methods without dropping it onto the disk(fileless dump)
 
+
 Overview of the techniques, used in this tool can be found here: https://tastypepperoni.medium.com/bypassing-defenders-lsass-dump-detection-and-ppl-protection-in-go-7dd85d9a32e6
 
+_Note that PROCEXP15.SYS is listed in the source files for compiling purposes. It does not need to be transferred on the target machine alongside the PPLBlade.exe.
+
+It’s already embedded into the PPLBlade.exe. The exploit is just a single executable._
+
+Modes:
+1) Dump - Dump process memory using PID or Process Name
+2) Decrypt - Revert obfuscated(--obfuscate) dump file to its original state
+3) Cleanup - Do cleanup manually, in case something goes wrong on execution(Note that the option values should be the same as for the execution, we're trying to clean up)
+4) DoThatLsassThing - Dump lsass.exe
 
 ```
 Usage of PPLBlade.exe:
   -driver string
-        Path where the driver file will be dropped (default "D:\\releasetest\\PPLBlade\\PPLBLADE.SYS")
+        Path where the driver file will be dropped (default: current directory)
   -dumpmode string
         Dump mode [local|network] (default "local")
   -dumpname string
